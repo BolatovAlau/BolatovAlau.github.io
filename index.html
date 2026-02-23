@@ -1,127 +1,52 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>PepePe — DevOps + SWE Portfolio</title>
-    <meta name="description" content="Single-page static site for DevOps engineer with SWE background" />
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container">
-        <h1 class="brand">PepePe</h1>
-        <nav class="nav">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-          <button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">🌙</button>
-        </nav>
-      </div>
-    </header>
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title>Bolatov Alau</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
-    <main>
-      <section class="hero">
-        <div class="container hero-inner">
-          <div class="hero-left">
-            <img src="avatar.svg" alt="Avatar" class="avatar">
-          </div>
-          <div class="hero-right">
-            <h2>Hi — I'm <strong>Your Name</strong></h2>
-            <p class="lead">DevOps engineer with a software-engineering background. I automate infra, build reliable CI/CD, and focus on observability.</p>
-            <p class="meta">Location: Remote • Open to collaboration</p>
-            <p class="actions">
-              <a class="btn" href="#projects">See projects</a>
-              <a class="btn" href="resume.pdf" download>Resume</a>
-              <a class="btn ghost" href="#contact">Contact</a>
-            </p>
-          </div>
-        </div>
-      </section>
+	<div class="container">
+		<div class="hero">
+			<h1 class="name"><strong>Alau</strong> Bolatov</h1>
+			<span class="job-title">DevOps Software Engineer</span>
+			<span class="email">bolatov.alau@gmail.com</span>
 
-      <section id="about" class="container card">
-        <h3>About</h3>
-        <p>I build and maintain infrastructure, CI/CD pipelines, observability and resilient systems. I enjoy automating toil and writing reliable code.</p>
-      </section>
+			<h2 class="lead">I'm quite busy <s>lazy</s> to build my personal website right now.</h2>
 
-      <section id="skills" class="container card">
-        <h3>Skills</h3>
-        <div class="chips">
-          <span class="chip">Terraform</span>
-          <span class="chip">Kubernetes</span>
-          <span class="chip">GitHub Actions</span>
-          <span class="chip">Docker</span>
-          <span class="chip">Prometheus</span>
-          <span class="chip">Go / Python</span>
-        </div>
-      </section>
+			<br />
+			I live in the United States 🗽, I speak three languages 🗣️🌎, and I have an MS in CS 💻🎓. 
+			<br />
+			<img src="chi.jpg" style="width: 100%;">
+			
+			<br>but I'm originally from Almaty, Kazakhstan. 🏔️:
+			<br />
 
-      <section id="projects" class="container">
-        <h3>Selected Projects</h3>
-        <div class="grid">
-          <article class="tile">
-            <h4>Platform Automation</h4>
-            <p>Infrastructure-as-code for multi-region clusters, automated deployments and cost controls.</p>
-            <p><a class="proj-link" href="#">View repo</a></p>
-          </article>
-          <article class="tile">
-            <h4>CI/CD Pipelines</h4>
-            <p>Fast, reliable pipelines with reusable jobs and immutable artifacts.</p>
-            <p><a class="proj-link" href="#">View pipeline</a></p>
-          </article>
-          <article class="tile">
-            <h4>Observability</h4>
-            <p>Tracing, metrics and alerts tuned to actionable signals.</p>
-            <p><a class="proj-link" href="#">View dashboards</a></p>
-          </article>
-        </div>
-      </section>
+			<img src="al.jpg" style="width: 100%;">
 
-      <section id="contact" class="container card">
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/your-username" target="_blank" rel="noopener">github.com/your-username</a></p>
-        <p>LinkedIn: <a href="#" target="_blank" rel="noopener">linkedin.com/in/your-profile</a></p>
-        <p>Twitter: <a href="#" target="_blank" rel="noopener">@yourhandle</a></p>
-      </section>
-    </main>
+			<br />
 
-    <footer class="site-footer">
-      <div class="container">
-        <small>© <span id="year"></span> PepePe — Built with HTML & CSS</small>
-      </div>
-    </footer>
+And my all-time favorite city iiiiiiiis — ISTANBUL ❤️.
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+			<br />
 
-      (function(){
-        const btn = document.getElementById('themeToggle');
-        const storageKey = 'site-theme';
+			<img src="ist.jpg" style="width: 100%;">
 
-        function applyTheme(theme){
-          if(theme === 'light') document.documentElement.setAttribute('data-theme','light');
-          else document.documentElement.removeAttribute('data-theme');
-          btn.textContent = theme === 'light' ? '☀️' : '🌙';
-        }
+			<br />
+			
+			I love Dota2 🎮:
+			<br />
 
-        function init(){
-          const saved = localStorage.getItem(storageKey);
-          if(saved){ applyTheme(saved); return; }
+			<img src="dota2_social.jpg" style="width: 100%;">
 
-          const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
-          applyTheme(prefersLight ? 'light' : 'dark');
-        }
+			<br />
+			And SOCCER ⚽: <br />
+			<img src="soccer.webp" style="width: 100%;">
 
-        btn.addEventListener('click', ()=>{
-          const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
-          const next = current === 'light' ? 'dark' : 'light';
-          applyTheme(next);
-          localStorage.setItem(storageKey, next);
-        });
+			You still there? Text me if you are. 
+		</div>
+	</div>
 
-        init();
-      }());
-    </script>
-  </body>
+</body>
 </html>
